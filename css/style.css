@@ -45,7 +45,7 @@ body.light-theme .buttons .button:hover {
 .example {
  font-family: 'Work Sans', sans-serif;
   width: 550px;
-  height: 778px;
+  height: 850px;
   margin: auto;
   padding: 20px;
   box-sizing: border-box;
@@ -226,4 +226,16 @@ body.light-theme .buttons .button:hover {
     width: 300px;
     height: 300px;
   }
+  
+  audio { width: 100%; display: block; display: flex;
+    justify-content: center;
+   margin-top: 25px;
+  }
+
+}
+
+audio { width: 100%;
+display: flex;
+justify-content: center;
+margin-top: 25px;
 }
