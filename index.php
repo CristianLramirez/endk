@@ -38,6 +38,9 @@
           </div>
         <div class="buttons">
           <a href="https://www.youtube.com/watch?v=w4_nLuC9CiY&ab_channel=EdgarPacheco-ENDK" class="button"><i class="fab fa-youtube" style='font-size:22px'></i> <span>YouTube</span></a>
+          <audio id = "track" controls loop>
+            <source src="assets/music/track1.mp3" type="audio/mpeg">
+          </audio>
         </div>
     </div>
 
