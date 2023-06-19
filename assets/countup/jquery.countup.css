@@ -1,11 +1,11 @@
 .countdownHolder{
-		width:520px;
-		font: 60px/1.5 'Open Sans Condensed',sans-serif;
+		/*width:520px;*/
+		font: 58px/1.5 'Open Sans Condensed',sans-serif;
 		font-weight: bold;
 		text-align:center;
 		letter-spacing:-3px;
 	        display: flex;
-		justify-content: center;
+		/*justify-content: center;*/
 	}
 	
 	.position{
