@@ -1,0 +1,507 @@
+.countdownHolder{
+		display: flex;
+		width:520px;
+		font: 60px/1.5 'Open Sans Condensed',sans-serif;
+		font-weight: bold;
+		text-align:center;
+		letter-spacing:-3px;
+	}
+	
+	.position{
+		display: inline-block;
+		height: 1.6em;
+		overflow: hidden;
+		position: relative;
+		width: 0.80em;
+	}
+	
+	.digit{
+		height: 90px;
+		position:absolute;
+		display:block;
+		width:0.85em;
+		background-color:#DDDDDD;
+		border-radius:0.1em;
+		text-align:center;
+		color:#202020;
+		letter-spacing:0px;
+
+	
+		/*position:relative;
+		border-: 1px solid red*/
+	}
+	
+	.digit:before { content: '';
+		position: absolute;
+		bottom: 50%;
+		border-bottom: 1px #202020 solid;
+		width: 200%;
+		z-index:0;
+	}
+
+	.countdownHolder .heading:before {
+		display: block;
+		height: 30px;
+		line-height: 30px;
+		text-align: center;
+	}
+	
+	
+	.digit.static{
+		width: 48px;
+		box-shadow:1px 1px 1px rgba(4, 4, 4, 0.35);
+		background-image: linear-gradient(bottom, #DDDDDD 50%, #e4e3e3 50%);
+		background-image: -o-linear-gradient(bottom, #DDDDDD 50%, #e4e3e3 50%);
+		background-image: -moz-linear-gradient(bottom, #DDDDDD 50%, #e4e3e3 50%);
+		background-image: -webkit-linear-gradient(bottom,#DDDDDD 50%, #e4e3e3 50%);
+		background-image: -ms-linear-gradient(bottom, #DDDDDD 50%, #e4e3e3 50%);
+		
+		background-image: -webkit-gradient(
+			linear,
+			left bottom,
+			left top,
+			color-stop(0.5, #e4e3e3),
+			color-stop(0.5, #DDDDDD)
+		);
+	}
+
+	.countdownHolder .digit:after {
+		content: '';
+		z-index: 2;
+		position: absolute;
+		bottom: 0px;
+		left: 0px;
+		width: 50px;
+		height: 40px;
+		border-radius: 0px 0px 4px 4px;
+	}
+	
+	/**
+	 * You can use these classes to hide parts
+	 * of the countdown that you don't need.
+	 */
+	
+	.countDays{ /* display:none !important;*/ }
+	.countDiv0{ /* display:none !important;*/}
+	.countHours{}
+	.countDiv1{}
+	.countMinutes{}
+	.countDiv2{}
+	.countSeconds{}
+	
+	
+	.countDiv{
+		display:inline-block;
+		width:25px;
+		height:1.6em;
+		position:relative;
+	}
+	
+	.countDiv:before,
+	.countDiv:after{
+		position:absolute;
+		width:9px;
+		height:9px;
+		background-color:#DDDDDD;
+		border-radius:50%;
+		left:50%;
+		margin-left:-4px;
+		top: 90px;
+		box-shadow:1px 1px 1px rgba(4, 4, 4, 0.5);
+		content:'';
+	}
+	
+	.countDiv:after{
+		top:65px;
+	}
+
+	.line-div{
+		width: 150px;
+		height: 50px;
+		position: absolute;
+		border-bottom: 3px solid red
+	}
+
+	.hDias::before {
+		font: 25px/1.5 'Open Sans Condensed',sans-serif;
+		color: #DDDDDD;
+		content: "Días";
+		display: flex;
+		flex-direction: column;
+		letter-spacing: -3px
+	}
+
+	.hHoras::before {
+		font: 25px/1.5 'Open Sans Condensed',sans-serif;
+		color: #DDDDDD;
+		content: "Horas";
+		display: flex;
+		flex-direction: column;
+		letter-spacing: -3px
+	}
+
+	.hMinutos::before {
+		font: 25px/1.5 'Open Sans Condensed',sans-serif;
+		color: #DDDDDD;
+		content: "Min";
+		display: flex;
+		flex-direction: column;
+		letter-spacing: -3px
+	}
+
+	.hSegundos::before {
+		font: 25px/1.5 'Open Sans Condensed',sans-serif;
+		color: #DDDDDD;
+		content: "Seg";
+		display: flex;
+		flex-direction: column;
+		letter-spacing: -3px
+		
+	}
+
+	.deconstructed {
+		position: relative;
+		margin: auto;
+		height: 1em;
+		color: transparent;
+		font-family: 'Cambay', sans-serif;
+		font-size: 5vw;
+		font-weight: 800;
+		letter-spacing: -0.02em;
+		line-height: 1.03em;
+		text-align: center;
+	}
+		
+		.deconstructed > div {
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		color: #ffff64;
+		pointer-events: none;
+		}
+		
+		.deconstructed > div:nth-child(1) {
+		-webkit-mask-image: linear-gradient(black 25%, transparent 25%);
+		mask-image: linear-gradient(black 25%, transparent 25%);
+		animation: deconstructed1 5s infinite;
+		}
+		
+		.deconstructed > div:nth-child(2) {
+		-webkit-mask-image: linear-gradient(transparent 25%, black 25%, black 50%, transparent 50%);
+		mask-image: linear-gradient(transparent 25%, black 25%, black 50%, transparent 50%);
+		animation: deconstructed2 5s infinite;
+		}
+		
+		.deconstructed > div:nth-child(3) {
+			-webkit-mask-image: linear-gradient(transparent 50%, black 50%, black 75%, transparent 75%);
+		mask-image: linear-gradient(transparent 50%, black 50%, black 75%, transparent 75%);
+		animation: deconstructed3 5s infinite;
+		}
+		
+		.deconstructed > div:nth-child(4) {
+			-webkit-mask-image: linear-gradient(transparent 75%, black 75%);
+		mask-image: linear-gradient(transparent 75%, black 75%);
+		animation: deconstructed4 5s infinite;
+		}
+		
+		@keyframes deconstructed1 {
+		0% {
+			transform: translateX(100%);
+		}
+		26% {
+			transform: translateX(0%);
+		}
+		83% {
+			transform: translateX(-0.1%);
+		}
+		100% {
+			transform: translateX(-120%);
+		}
+		}
+		
+		@keyframes deconstructed2 {
+		0% {
+			transform: translateX(100%);
+		}
+		24% {
+			transform: translateX(0.5%);
+		}
+		82% {
+			transform: translateX(-0.2%);
+		}
+		100% {
+			transform: translateX(-125%);
+		}
+		}
+		
+		@keyframes deconstructed3 {
+		0% {
+			transform: translateX(100%);
+		}
+		22% {
+			transform: translateX(0%);
+		}
+		81% {
+			transform: translateX(0%);
+		}
+		100% {
+			transform: translateX(-130%);
+		}
+		}
+		
+		@keyframes deconstructed4 {
+		0% {
+			transform: translateX(100%);
+		}
+		20% {
+			transform: translateX(0%);
+		}
+		80% {
+			transform: translateX(0%);
+		}
+		100% {
+			transform: translateX(-135%);
+		}
+		}
+
+@media (max-width: 550px) {
+	
+	.countdownHolder{
+		width:320px;
+		font: 39px/1.5 'Open Sans Condensed',sans-serif;
+		font-weight: bold;
+		text-align:center;
+		letter-spacing:-7px;
+	}
+	
+	.position{
+		display: inline-block;
+		height: 1.6em;
+		overflow: hidden;
+		position: relative;
+		width: 0.80em;
+	}
+	
+	.digit{
+		position:absolute;
+		display:block;
+		width:0.85em;
+		background-color:#DDDDDD;
+		border-radius:0.1em;
+		text-align:center;
+		color:#202020;
+		letter-spacing:0px;
+	}
+	
+	.countdownHolder .heading:before {
+		display: block;
+		height: 30px;
+		line-height: 30px;
+		text-align: center;
+	}
+	
+	
+	.digit.static{
+		height: 55px;
+		width: 30px;
+		box-shadow:1px 1px 1px rgba(4, 4, 4, 0.35);
+		background-image: linear-gradient(bottom, #DDDDDD 50%, #e4e3e3 50%);
+		background-image: -o-linear-gradient(bottom, #DDDDDD 50%, #e4e3e3 50%);
+		background-image: -moz-linear-gradient(bottom, #DDDDDD 50%, #e4e3e3 50%);
+		background-image: -webkit-linear-gradient(bottom,#DDDDDD 50%, #e4e3e3 50%);
+		background-image: -ms-linear-gradient(bottom, #DDDDDD 50%, #e4e3e3 50%);
+		
+		background-image: -webkit-gradient(
+			linear,
+			left bottom,
+			left top,
+			color-stop(0.5, #e4e3e3),
+			color-stop(0.5, #DDDDDD)
+		);
+	}
+	
+	/**
+	 * You can use these classes to hide parts
+	 * of the countdown that you don't need.
+	 */
+	
+	.countDays{ /* display:none !important;*/ }
+	.countDiv0{ /* display:none !important;*/ }
+	.countHours{}
+	.countDiv1{}
+	.countMinutes{}
+	.countDiv2{}
+	.countSeconds{}
+	
+	
+	.countDiv{
+		display:inline-block;
+		width:18px;
+		height:1.6em;
+		position:relative;
+	}
+	
+	.countDiv:before,
+	.countDiv:after{
+		position:absolute;
+		width:7px;
+		height:7px;
+		background-color:#DDDDDD;
+		border-radius:50%;
+		left:50%;
+		margin-left:-3px;
+		top:70px;
+		box-shadow:1px 1px 1px rgba(4, 4, 4, 0.5);
+		content:'';
+	}
+	
+	.countDiv:after{
+		top:50px;
+	}
+
+	.hDias::before {
+		font: 20px/1.5 'Open Sans Condensed',sans-serif;
+		color: #DDDDDD;
+		content: "Días";
+		display: flex;
+		flex-direction: column;
+		letter-spacing: 0px;
+	}
+
+	.hHoras::before {
+		font: 20px/1.5 'Open Sans Condensed',sans-serif;
+		color: #DDDDDD;
+		content: "Horas";
+		display: flex;
+		flex-direction: column;
+		letter-spacing: 0px;
+	}
+
+	.hMinutos::before {
+		font: 20px/1.5 'Open Sans Condensed',sans-serif;
+		color: #DDDDDD;
+		content: "Min";
+		display: flex;
+		flex-direction: column;
+		letter-spacing: 0px;
+	}
+
+	.hSegundos::before {
+		font: 20px/1.5 'Open Sans Condensed',sans-serif;
+		color: #DDDDDD;
+		content: "Seg";
+		display: flex;
+		flex-direction: column;
+		letter-spacing: 0px;
+	}
+
+	.deconstructed {
+		position: relative;
+		margin: auto;
+		height: 1em;
+		color: transparent;
+		font-family: 'Cambay', sans-serif;
+		font-size: 15vw;
+		font-weight: 800;
+		letter-spacing: -0.02em;
+		line-height: 1.03em;
+		text-align: center;
+	}
+		
+	.deconstructed > div {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	color: #ffff64;
+	pointer-events: none;
+	}
+	
+	.deconstructed > div:nth-child(1) {
+	-webkit-mask-image: linear-gradient(black 25%, transparent 25%);
+	mask-image: linear-gradient(black 25%, transparent 25%);
+	animation: deconstructed1 5s infinite;
+	}
+	
+	.deconstructed > div:nth-child(2) {
+	-webkit-mask-image: linear-gradient(transparent 25%, black 25%, black 50%, transparent 50%);
+	mask-image: linear-gradient(transparent 25%, black 25%, black 50%, transparent 50%);
+	animation: deconstructed2 5s infinite;
+	}
+	
+	.deconstructed > div:nth-child(3) {
+		-webkit-mask-image: linear-gradient(transparent 50%, black 50%, black 75%, transparent 75%);
+	mask-image: linear-gradient(transparent 50%, black 50%, black 75%, transparent 75%);
+	animation: deconstructed3 5s infinite;
+	}
+	
+	.deconstructed > div:nth-child(4) {
+		-webkit-mask-image: linear-gradient(transparent 75%, black 75%);
+	mask-image: linear-gradient(transparent 75%, black 75%);
+	animation: deconstructed4 5s infinite;
+	}
+	
+	@keyframes deconstructed1 {
+	0% {
+		transform: translateX(100%);
+	}
+	26% {
+		transform: translateX(0%);
+	}
+	83% {
+		transform: translateX(-0.1%);
+	}
+	100% {
+		transform: translateX(-120%);
+	}
+	}
+	
+	@keyframes deconstructed2 {
+	0% {
+		transform: translateX(100%);
+	}
+	24% {
+		transform: translateX(0.5%);
+	}
+	82% {
+		transform: translateX(-0.2%);
+	}
+	100% {
+		transform: translateX(-125%);
+	}
+	}
+	
+	@keyframes deconstructed3 {
+	0% {
+		transform: translateX(100%);
+	}
+	22% {
+		transform: translateX(0%);
+	}
+	81% {
+		transform: translateX(0%);
+	}
+	100% {
+		transform: translateX(-130%);
+	}
+	}
+	
+	@keyframes deconstructed4 {
+	0% {
+		transform: translateX(100%);
+	}
+	20% {
+		transform: translateX(0%);
+	}
+	80% {
+		transform: translateX(0%);
+	}
+	100% {
+		transform: translateX(-135%);
+	}
+	}
+
+}
