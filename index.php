@@ -42,7 +42,7 @@
     </div>
 
           <!-- JavaScript includes -->
-          <script src="http://code.jquery.com/jquery-1.8.2.min.js"></script>
+          <script src="https://code.jquery.com/jquery-1.8.2.min.js"></script>
           <script src="assets/countup/jquery.countup.js"></script>
           <script src="assets/js/script.js"></script>
           <script>
